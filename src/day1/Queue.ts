@@ -18,13 +18,14 @@ export default class Queue<T> {
         const node = {value : item} as Node<T>
         this.length++
         if(!this.tail){
-            this.head = this.tail = node         
+            this.head = this.tail = node
+            return     
         }
 
         this.tail.next = node
         this.tail = node
 
-        console.log(this.tail.value)
+        console.log(this.head)
 
     }
     deque(): T | undefined {
